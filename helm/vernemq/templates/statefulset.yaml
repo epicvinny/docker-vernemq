@@ -72,6 +72,8 @@ spec:
             {{- /* Add this localhost listener in order to get the port forwarding working */}}
             - name: DOCKER_VERNEMQ_LISTENER__TCP__LOCALHOST
               value: "127.0.0.1:1883"
+            - name: DOCKER_VERNEMQ_LISTENER__WS__LOCALHOST
+              value: "127.0.0.1:8080"
             {{- if .Values.service.mqtts.enabled }}
             - name: DOCKER_VERNEMQ_LISTENER__SSL__DEFAULT
               value: "$(MY_POD_IP):{{ .Values.service.mqtts.port }}"
