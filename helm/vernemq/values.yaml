@@ -125,13 +125,13 @@ statefulset:
   ## Liveness and Readiness probe values
   ## Ref: https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes
   livenessProbe:
-    initialDelaySeconds: 90
+    initialDelaySeconds: 10
     periodSeconds: 10
     timeoutSeconds: 5
     successThreshold: 1
     failureThreshold: 3
   readinessProbe:
-    initialDelaySeconds: 90
+    initialDelaySeconds: 10
     periodSeconds: 10
     timeoutSeconds: 5
     successThreshold: 1
