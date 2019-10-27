@@ -74,6 +74,26 @@ spec:
               value: "127.0.0.1:1883"
             - name: DOCKER_VERNEMQ_LISTENER__WS__LOCALHOST
               value: "127.0.0.1:8080"
+            - name: DOCKER_VERNEMQ_plugins__vmq_passwd
+              value: "off"
+            - name: DOCKER_VERNEMQ_plugins__vmq_acl
+              value: "off"              
+            - name: DOCKER_VERNEMQ_plugins__vmq_diversity
+              value: "on"
+            - name: DOCKER_VERNEMQ_vmq_diversity__auth_postgres__enabled
+              value: "on"
+            - name: DOCKER_VERNEMQ_vmq_diversity__postgres__host
+              value: "postgresql"      
+            - name: DOCKER_VERNEMQ_vmq_diversity__postgres__port
+              value: "5432"  
+            - name: DOCKER_VERNEMQ_vmq_diversity__postgres__user
+              value: "vernemq"  
+            - name: DOCKER_VERNEMQ_vmq_diversity__postgres__password
+              value: "vernemq"  
+            - name: DOCKER_VERNEMQ_vmq_diversity__postgres__database
+              value: "vernemq_db"  
+            - name: DOCKER_VERNEMQ_vmq_diversity__postgres__password_hash_method
+              value: "crypt"               
             {{- if .Values.service.mqtts.enabled }}
             - name: DOCKER_VERNEMQ_LISTENER__SSL__DEFAULT
               value: "$(MY_POD_IP):{{ .Values.service.mqtts.port }}"
