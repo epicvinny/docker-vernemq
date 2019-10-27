@@ -87,7 +87,7 @@ spec:
             - name: DOCKER_VERNEMQ_vmq_diversity__postgres__port
               value: "5432"  
             - name: DOCKER_VERNEMQ_vmq_diversity__postgres__user
-              value: "vernemq"  
+              value: "postgres"  
             - name: DOCKER_VERNEMQ_vmq_diversity__postgres__password
               value: "vernemq"  
             - name: DOCKER_VERNEMQ_vmq_diversity__postgres__database
